@@ -1,0 +1,73 @@
+:root{
+  --night:#1c1a4a;
+  --night-2:#2a2766;
+  --bulb:#ffb62e;
+  --teal:#19b5a5;
+  --paper:#fff6e3;
+  --ink:#241f3d;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{font-family:"Nunito",Verdana,Arial,sans-serif;color:var(--ink);background:var(--paper);line-height:1.65;font-size:1.05rem}
+h1,h2,h3,.logo{font-family:"Alfa Slab One",Georgia,"Times New Roman",serif;font-weight:400;line-height:1.15}
+a{color:inherit}
+
+/* header */
+.site-header{position:sticky;top:0;z-index:10;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.5rem 1.5rem;padding:.8rem 5%;background:var(--night);border-bottom:6px dotted var(--bulb)}
+.logo{color:var(--bulb);font-size:1.4rem;text-decoration:none}
+nav ul{list-style:none;display:flex;flex-wrap:wrap;gap:.3rem}
+nav a{display:block;padding:.4rem .8rem;color:#fff;text-decoration:none;border-radius:6px;font-weight:700;font-size:.95rem}
+nav a:hover,nav a:focus-visible{background:var(--teal);color:var(--night)}
+
+/* hero */
+.hero{display:grid;grid-template-columns:1.1fr 1fr;gap:2.5rem;align-items:center;padding:4rem 5%;background:linear-gradient(135deg,var(--night),var(--night-2));color:#fff}
+.hero-kicker{color:var(--bulb);font-weight:800;margin-bottom:.6rem}
+.hero h1{font-size:clamp(2rem,4.5vw,3.4rem);margin-bottom:1rem}
+.hero p{max-width:34rem;margin-bottom:1.6rem}
+.hero-img{width:100%;height:320px;object-fit:cover;border:8px solid var(--paper);border-radius:14px;transform:rotate(2deg);box-shadow:8px 8px 0 var(--bulb)}
+.btn{display:inline-block;padding:.8rem 1.6rem;margin:0 .6rem .6rem 0;background:var(--bulb);color:var(--night);font-weight:800;text-decoration:none;border-radius:999px;border:3px solid var(--bulb)}
+.btn:hover{background:#fff;border-color:#fff}
+.btn-ghost{background:transparent;color:#fff;border-color:#fff}
+.btn-ghost:hover{background:var(--teal);border-color:var(--teal);color:var(--night)}
+a:focus-visible{outline:3px solid var(--teal);outline-offset:2px}
+
+/* sections */
+.section{padding:4rem 5%}
+.section.alt{background:#ffe9bd}
+.section h2{font-size:clamp(1.6rem,3vw,2.3rem);margin-bottom:1.5rem;color:var(--night)}
+.two-col{display:grid;grid-template-columns:1.2fr 1fr;gap:2rem;align-items:start}
+.why{background:var(--night);color:#fff;padding:1.5rem;border-radius:12px;border-left:10px solid var(--teal)}
+.why h3{color:var(--bulb);margin-bottom:.6rem}
+
+/* ride tickets */
+.tickets{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1.4rem}
+.ticket{position:relative;background:var(--paper);padding:1.4rem 1.2rem 1.4rem 1.6rem;border:3px solid var(--night);border-radius:10px;border-left:14px dashed var(--teal)}
+.ticket h3{font-size:1.15rem;margin-bottom:.5rem;color:var(--night)}
+
+.zone-list{list-style:none;display:grid;gap:1rem;max-width:52rem}
+.zone-list li{padding:1rem 1.2rem;background:#fff;border-left:8px solid var(--bulb);border-radius:6px}
+
+/* gallery */
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem}
+.gallery img{width:100%;height:240px;object-fit:cover;border:5px solid #fff;border-radius:10px;box-shadow:0 4px 0 var(--night)}
+
+/* tips */
+.tip-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.4rem}
+.tip-card{padding:1.4rem;background:#fff;border:3px solid var(--night);border-radius:12px}
+.tip-card h3{font-size:1.2rem;margin-bottom:.8rem;color:var(--night)}
+.tip-card ul,.tip-card ol{padding-left:1.2rem}
+.tip-card li{margin-bottom:.6rem}
+
+/* contact + footer */
+.contact{background:var(--teal)}
+.contact h2{color:var(--night)}
+.contact p{margin-bottom:.5rem}
+.site-footer{padding:2rem 5%;text-align:center;background:var(--night);color:#fff;border-top:6px dotted var(--bulb)}
+.site-footer strong{color:var(--bulb)}
+
+/* responsive */
+@media (max-width:800px){
+  .hero,.two-col{grid-template-columns:1fr}
+  .hero-img{height:230px}
+  .site-header{justify-content:center;text-align:center}
+}
